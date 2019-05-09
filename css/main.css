@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700");
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #ef6a01;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav a {
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 20px;
+  margin: 0 50px;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: white;
+  bottom: -4px;
+  left: 50%;
+  right: 50%;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+nav a:hover::after, nav a.selected::after {
+  left: 0%;
+  right: 0%;
+}
+
+a.up svg {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 50%;
+  background: #d65f01;
+  fill: white;
+  cursor: default;
+  opacity: 0;
+  -webkit-transition: opacity 350ms ease;
+  transition: opacity 350ms ease;
+}
+
+a.up.show svg {
+  cursor: pointer;
+  opacity: 1;
+}
+
+main {
+  padding: 2.5em;
+}
+
+main #description {
+  width: 750px;
+  margin: 0 auto;
+}
+
+main #description article {
+  margin: 2em 0;
+}
+
+main #description article header {
+  display: inline;
+  position: relative;
+  font-size: 1.8em;
+}
+
+main #description article header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #d65f01;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+}
+
+main #description article div {
+  margin-top: 1em;
+}
+
+main #description article div img {
+  border-radius: 5px;
+  display: block;
+  margin: 1.5em auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #description article div p {
+  text-align: justify;
+}
+/*# sourceMappingURL=main.css.map */

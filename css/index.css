@@ -1,0 +1,114 @@
+body > header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 350px;
+  background-color: black;
+  color: #d65f01;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 72px;
+}
+
+body > header img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: -10px;
+}
+
+body > header .bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+body > header .bg video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main article {
+  width: 700px;
+  margin: 1em auto;
+}
+
+main article header {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 1.5em;
+}
+
+main article figure img {
+  width: 100%;
+}
+
+main article figure img.highlighted {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: initial;
+  max-width: 90vw;
+  height: initial;
+  max-height: 90vh;
+  -webkit-animation: highlight 300ms ease-in-out forwards;
+          animation: highlight 300ms ease-in-out forwards;
+  z-index: 1;
+}
+
+@-webkit-keyframes highlight {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes highlight {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+main article figure figcaption {
+  width: 90%;
+  margin: 1em auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main article p {
+  margin: 2em 0;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

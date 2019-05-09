@@ -1,0 +1,52 @@
+@import "variables";
+
+main {
+
+    .yt-video {
+        display: block;
+        margin: 0 auto 3em;
+        width: 700px;
+        height: 394px;
+    }
+
+    #description {
+        width: 850px;
+        margin: 0 auto;
+
+        article {
+            margin: 2em 0;
+
+            header {
+                display: inline;
+                position: relative;
+                font-size: 1.8em;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    background-color: $accent;
+                    bottom: -4px;
+                    height: 2px;
+                    width: 100%;
+                }
+            }
+
+            div {
+                margin-top: 1em;
+
+                img {
+                    border-radius: 5px;
+                    display: block;
+                    margin: 1.5em auto;
+                }
+
+                p {
+                    text-align: justify;
+                }
+            }
+        }
+        
+    }
+
+}
