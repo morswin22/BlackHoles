@@ -7,6 +7,12 @@
     <title>Black Holes</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="js/firebase.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
 </head>
 <body>
     
@@ -51,11 +57,12 @@
           <p>
             Subscribe to our newsletter for more black hole news. We value your privacy and keep your email address save at Firebase
           </p>
+          <input type="email" placeholder="Your email address">
           <button>
             Subscribe
           </button>
           <small>
-            You can unsubscribe at any time by clicking the unsubscribe button sent with our mails
+            You can unsubscribe at any time by clicking the unsubscribe button sent with our emails
           </small>
         </div>
         
@@ -79,6 +86,7 @@
 
     <script src="js/header.js"></script>
     <script src="js/highlight.js"></script>
+    <script src="js/subscription.js"></script>
 
 </body>
 </html>
