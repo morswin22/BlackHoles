@@ -3,10 +3,15 @@
     const input = document.querySelector('#newsletter input');
     const defaultMessage = input.validationMessage;
     const database = firebase.database();
-    
+
     subButton.addEventListener("click", function () {
         if (input.className == 'revealed') {
-            if (input.value.length > 0 && input.checkValidity()) {
+            if (input.value.length == 0) {
+                input.setCustomValidity("Please, fill this field with your data");
+                input.reportValidity();
+                return;
+            }
+            if (input.checkValidity()) {
                 database.ref('/users/').once('value', function(e){
                     let users = e.exportVal();
                     let ok = true;
