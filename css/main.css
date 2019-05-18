@@ -130,5 +130,6 @@ main #description article div img {
 
 main #description article div p {
   text-align: justify;
+  line-height: 1.7em;
 }
 /*# sourceMappingURL=main.css.map */

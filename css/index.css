@@ -134,7 +134,45 @@ main #newsletter input, main #newsletter button {
   outline: none;
 }
 
-main #newsletter input {
+main #newsletter div {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+main #newsletter div::after, main #newsletter div::before {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+main #newsletter div::after {
+  background-image: url("../images/loading.gif");
+}
+
+main #newsletter div.loading::after {
+  opacity: 1;
+}
+
+main #newsletter div.success::before {
+  background-image: url("../images/success.png");
+  opacity: 1;
+}
+
+main #newsletter div.failure::before {
+  background-image: url("../images/failure.png");
+  opacity: 1;
+}
+
+main #newsletter div input {
   width: 180px;
   border-bottom: 2px solid #ef6a01;
   padding: 0 .5em;
@@ -145,7 +183,7 @@ main #newsletter input {
   transition: all 200ms ease-in-out;
 }
 
-main #newsletter input.revealed {
+main #newsletter div input.revealed {
   height: 30px;
   border-width: 2px;
   margin-bottom: 1em;

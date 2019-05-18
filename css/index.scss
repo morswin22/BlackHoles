@@ -102,20 +102,54 @@ main {
             outline: none;
         }
 
-        input {
-            width: 180px;
-            border-bottom: 2px solid lighten($accent, 5%);
-            padding: 0 .5em;
-            height: 0px;
-            border-width: 0px;
-            margin-bottom: 0px;
+        div {
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
 
-            transition: all 200ms ease-in-out;
+            &::after, &::before {
+                content: '';
+                position: absolute;
+                right: -30px;
+                top: 0;
+                bottom: 0;
+                width: 30px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0;
+            }
 
-            &.revealed {
-                height: 30px;
-                border-width: 2px;
-                margin-bottom: 1em;
+            &::after {
+                background-image: url('../images/loading.gif');
+            }
+
+            &.loading::after {
+                opacity: 1;
+            }
+            &.success::before {
+                background-image: url('../images/success.png');
+                opacity: 1;
+            }
+            &.failure::before {
+                background-image: url('../images/failure.png');
+                opacity: 1;
+            }
+
+            input {
+                width: 180px;
+                border-bottom: 2px solid lighten($accent, 5%);
+                padding: 0 .5em;
+                height: 0px;
+                border-width: 0px;
+                margin-bottom: 0px;
+
+                transition: all 200ms ease-in-out;
+
+                &.revealed {
+                    height: 30px;
+                    border-width: 2px;
+                    margin-bottom: 1em;
+                }
             }
         }
 

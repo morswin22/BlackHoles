@@ -1,13 +1,10 @@
 @import "variables";
 
 main {
-    p {
-        text-align: justify;
-    }
-
     & > p {
         width: 750px;
         margin: 0 auto;
+        line-height: 1.7em;
     }
 
     #types {
@@ -46,44 +43,8 @@ main {
         }
     }
 
-    #description {
-        width: 750px;
-        margin: 0 auto;
-
-        .marker {
-            margin-top: -3.5em;
-            height: 3.5em;
-        }
-
-        article {
-            margin: 0 0 2em 0;
-
-            header {
-                display: inline;
-                position: relative;
-                font-size: 1.8em;
-
-                &::after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    background-color: $accent;
-                    bottom: -4px;
-                    height: 2px;
-                    width: 100%;
-                }
-            }
-
-            div {
-                margin-top: 1em;
-
-                img {
-                    border-radius: 5px;
-                    display: block;
-                    margin: 1.5em auto;
-                }
-            }
-        }
-        
+    #description .marker {
+        margin-top: -3.5em;
+        height: 3.5em;
     }
 }

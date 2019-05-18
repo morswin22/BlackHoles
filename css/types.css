@@ -1,10 +1,7 @@
-main p {
-  text-align: justify;
-}
-
 main > p {
   width: 750px;
   margin: 0 auto;
+  line-height: 1.7em;
 }
 
 main #types {
@@ -56,43 +53,8 @@ main #types a:hover::after {
   width: 100%;
 }
 
-main #description {
-  width: 750px;
-  margin: 0 auto;
-}
-
 main #description .marker {
   margin-top: -3.5em;
   height: 3.5em;
-}
-
-main #description article {
-  margin: 0 0 2em 0;
-}
-
-main #description article header {
-  display: inline;
-  position: relative;
-  font-size: 1.8em;
-}
-
-main #description article header::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #d65f01;
-  bottom: -4px;
-  height: 2px;
-  width: 100%;
-}
-
-main #description article div {
-  margin-top: 1em;
-}
-
-main #description article div img {
-  border-radius: 5px;
-  display: block;
-  margin: 1.5em auto;
 }
 /*# sourceMappingURL=types.css.map */
