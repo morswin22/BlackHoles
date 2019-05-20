@@ -36,10 +36,30 @@ body > header {
     }
 }
 
+nav a.header {
+    display: none;
+
+    @media (max-width: 600px) {
+        display: initial;
+    }
+}
+
 main {
     article {
         width: 700px;
         margin: 1em auto;
+
+        @media (max-width: 782px) {
+            width: 500px;
+        }
+
+        @media (max-width: 600px) {
+            width: 300px;
+        }
+
+        @media (max-width: 374px) {
+            width: 100%;
+        }
 
         header {
             font-size: 18px;
@@ -48,6 +68,10 @@ main {
             margin: 0 0 1.5em;
         }
         figure {
+            @media (max-width: 600px) {
+                margin: 1em 0;
+            }
+
             img {
                 width: 100%;
                 cursor: zoom-in;
@@ -87,7 +111,7 @@ main {
     
     #newsletter {
         text-align: center;
-        width: 530px;
+        max-width: 530px;
         margin: 4em auto;
         padding: 1.5em 0;
         border: 1px solid #ccc;
