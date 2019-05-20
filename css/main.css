@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700");
 html, body {
   margin: 0;
@@ -34,6 +35,41 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1;
+  -webkit-transition: padding 200ms ease;
+  transition: padding 200ms ease;
+}
+
+@media (max-width: 600px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+nav.opened {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5em 0;
+}
+
+@media (max-width: 600px) {
+  nav.opened a:not(.header) {
+    margin: .5em auto;
+    height: 20px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  nav.opened a.header {
+    margin-bottom: .3em;
+  }
+  nav.opened a.header::before {
+    content: '▲';
+  }
 }
 
 nav a {
@@ -46,8 +82,14 @@ nav a {
           align-items: center;
   color: white;
   font-size: 20px;
-  margin: 0 50px;
+  margin: 0em 50px;
   position: relative;
+}
+
+@media (max-width: 963px) {
+  nav a {
+    margin: 0em auto;
+  }
 }
 
 nav a::after {
@@ -65,6 +107,29 @@ nav a::after {
 nav a:hover::after, nav a.selected::after {
   left: 0%;
   right: 0%;
+}
+
+@media (max-width: 600px) {
+  nav a:not(.header) {
+    height: 0px;
+    opacity: 0;
+    -webkit-transition: height, margin 200ms ease;
+    transition: height, margin 200ms ease;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a.header::after {
+    height: 0px;
+  }
+  nav a.header::before {
+    content: '▼';
+    cursor: pointer;
+    position: absolute;
+    right: -30px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 a.up svg {
@@ -91,22 +156,40 @@ main {
   padding: 2.5em;
 }
 
-main #description {
+main #description, main #types {
   width: 750px;
   margin: 0 auto;
 }
 
-main #description article {
+@media (max-width: 1023px) {
+  main #description, main #types {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  main #description, main #types {
+    width: 300px;
+  }
+}
+
+@media (max-width: 385px) {
+  main #description, main #types {
+    width: 100%;
+  }
+}
+
+main #description article, main #types article {
   margin: 2em 0;
 }
 
-main #description article header {
+main #description article header, main #types article header {
   display: inline;
   position: relative;
   font-size: 1.8em;
 }
 
-main #description article header::after {
+main #description article header::after, main #types article header::after {
   content: '';
   display: block;
   position: absolute;
@@ -116,19 +199,54 @@ main #description article header::after {
   width: 100%;
 }
 
-main #description article div {
+main #description article div, main #types article div {
   margin-top: 1em;
 }
 
-main #description article div img {
+main #description article div img, main #types article div img {
   border-radius: 5px;
   display: block;
   margin: 1.5em auto;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 500px;
 }
 
-main #description article div p {
+@media (max-width: 1023px) {
+  main #description article div img, main #types article div img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  main #description article div img, main #types article div img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 385px) {
+  main #description article div img, main #types article div img {
+    width: 90%;
+  }
+}
+
+main #description article div img.crop, main #types article div img.crop {
+  height: 350px;
+}
+
+@media (max-width: 1023px) {
+  main #description article div img.crop, main #types article div img.crop {
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  main #description article div img.crop, main #types article div img.crop {
+    height: 175px;
+  }
+}
+
+main #description article div p, main #types article div p {
   text-align: justify;
   line-height: 1.7em;
 }
