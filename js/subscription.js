@@ -4,6 +4,8 @@
     const defaultMessage = input.validationMessage;
     const database = firebase.database();
 
+    let lastInputValue = input.value;
+
     subButton.addEventListener("click", function () {
         if (input.classList.contains('revealed')) {
             if (input.value.length == 0) {
@@ -47,6 +49,11 @@
     input.addEventListener("keyup", function(e) {
         if (e.keyCode == 13) {
             subButton.click();
+        } else if (lastInputValue != input.value) {
+            input.parentElement.classList.remove('loading');
+            input.parentElement.classList.remove('failure');
+            input.parentElement.classList.remove('success');
+            lastInputValue = input.value;
         }
     });
 })();
