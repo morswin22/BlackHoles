@@ -32,7 +32,6 @@
                 setTimeout(function() {
                     heightKeeper.style.filter = 'blur(10px)';
                 },0);
-                // heightKeeper.style.filter = 'blur(0px)';
                 toHighlight.insertAdjacentElement('afterend', heightKeeper);
 
                 toHighlight.classList.add('highlighted');

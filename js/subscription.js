@@ -27,7 +27,6 @@
                         database.ref('/users/').push({email: input.value});
                         input.parentElement.classList.remove('loading');
                         input.parentElement.classList.add('success');
-                        // tell that user was accepted
                     } else {
                         input.setCustomValidity("This email address is already subscribed to our newsletter");
                         input.reportValidity();
