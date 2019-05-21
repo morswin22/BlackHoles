@@ -1,3 +1,27 @@
+main > p {
+  width: 750px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@media (max-width: 1023px) {
+  main > p {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  main > p {
+    width: 300px;
+  }
+}
+
+@media (max-width: 385px) {
+  main > p {
+    width: 100%;
+  }
+}
+
 main #types {
   display: -webkit-box;
   display: -ms-flexbox;

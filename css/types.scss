@@ -1,6 +1,22 @@
 @import "variables";
 
 main {
+    & > p {
+        width: 750px;
+        margin: 0 auto;
+        text-align: justify;
+
+        @media (max-width: 1023px) {
+            width: 500px;
+        }
+        @media (max-width: 600px) {
+            width: 300px;
+        }
+        @media (max-width: 385px) {
+            width: 100%;
+        }
+    }
+
     #types {
         display: flex;
         align-items: center;
